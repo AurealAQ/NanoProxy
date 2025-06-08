@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NanoGPT Image Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .form-group {
+            margin: 20px 0;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .example {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        .example h3 {
+            margin-top: 0;
+        }
+        .example code {
+            background-color: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NanoGPT Image Generator</h1>
+        
+        <form action="/generate" method="get">
+            <div class="form-group">
+                <label for="prompt">Enter your image prompt:</label>
+                <input type="text" id="prompt" name="prompt" placeholder="e.g., a serene mountain landscape at sunset" required>
+            </div>
+            <button type="submit">Generate Image</button>
+        </form>
+        
+        <div class="example">
+            <h3>How to use:</h3>
+            <p>1. Enter a description of the image you want to generate</p>
+            <p>2. Click "Generate Image" or use direct URL access:</p>
+            <p><code>http://localhost:5000/generate?prompt=your+image+description</code></p>
+        </div>
+    </div>
+</body>
+</html>
